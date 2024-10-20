@@ -32,4 +32,7 @@ dataSources:
           handler: handleOwnershipTransferred
         - event: Transfer(indexed address,indexed address,indexed uint256)
           handler: handleTransfer
+      callHandlers:
+        - function: mint(uint256,uint8,bytes32,bytes32,string)
+          handler: handleMint
       file: ./src/contract.ts
